@@ -17,6 +17,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidytuesdayR)
 library(ggplot2)
 library(reticulate)
+library(dplyr)
+library(leaflet)
 ```
 
 ## Loading coffee data set
@@ -44,6 +46,18 @@ ggplot(coffee_ratings, aes(total_cup_points, altitude_mean_meters, color=species
 ##World Maps
 
 ```{r}
+# pivot table
+
+pivot_coffee <- coffee_ratings %>%
+  group_by("country_of_origin") %>%
+  summarize("")
+
+
+```
+
+
+```{r}
+library(rworldmap)
 
 
 ```
